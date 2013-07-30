@@ -96,15 +96,21 @@ invalidator.
 Setup
 -----
 
-1. Add this module to your module path. You can also install it from the forge:
+* Add this module to your module path. You can also install it from the forge:
     puppet module install duritong/cm_guard
-1. PuppetCmGuard is implemented as an indirector for the catalog. This means that you need to hook it into
+* PuppetCmGuard is implemented as an indirector for the catalog. This means that you need to hook it into
    the master, by adding the following terminus to your /etc/puppet/routes.yaml file:
+
+This should look like:
+
     master:
       catalog:
         terminus: compiler_cm_guard
-1. Additionally you can configure the different aspects of PuppetCmGuard, within
-   /etc/puppet/cm_guard.yaml.  The defaults are:
+
+* Additionally you can configure the different aspects of PuppetCmGuard, within
+   /etc/puppet/cm_guard.yaml.
+
+The defaults are:
 
     compiler: 'static_compiler' # you might change this to compiler to use the default compiler,
                                 # which won't snapshot file resources
