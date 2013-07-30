@@ -143,6 +143,12 @@ The design is pretty simple:
    cache path? Because I did not want to pollute puppet's own internal store for catalogs with my catalog
    stuff.
 
+Caveats
+-------
+
+* Something that is not snapshoted are plugins. So any types or other extensions won't be cached as they
+  are synced before catalog compilation.
+
 Disclaimer
 ----------
 
