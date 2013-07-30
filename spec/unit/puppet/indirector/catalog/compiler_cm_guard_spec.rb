@@ -6,6 +6,10 @@ describe Puppet::Resource::Catalog::CompilerCmGuard do
 
   before :each do
     vardir = Dir.mktmpdir('cm_guard',File.expand_path(File.join(File.dirname(__FILE__),'../../../../tmp')))
+    if Puppet.version =~ /^2\./
+      # Puppet 2.7 does not yet create this directory automatically
+      Dir.mkdir File.join(vardir,'client_yaml')
+    end
     Puppet[:vardir] = vardir
   end
 
