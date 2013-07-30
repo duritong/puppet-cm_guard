@@ -3,6 +3,8 @@ PuppetCmGuard
 
 A puppet change management guard that includes catalog caching.
 
+[![Build Status](https://travis-ci.org/duritong/puppet-cm_guard.png)](https://travis-ci.org/duritong/puppet-cm_guard)
+
 Background
 ----------
 
