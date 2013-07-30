@@ -1,3 +1,3 @@
 Gemfile.lock
-spec/tmp
+spec/tmp/[a-z]*
 pkg
